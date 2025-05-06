@@ -31,4 +31,66 @@ tasks/
 /.*
 # Don't ignore these specific files
 !/.gitignore
-!/.env.example 
+!/.env.example
+
+# Ansible Proxy Forge specific ignores
+.vault_pass.txt
+*.retry
+group_vars/all/secrets.yml
+host_vars/*/secrets.yml
+*.key
+*.pem
+*vault.yml
+credentials/
+
+# Ansible specific ignores
+*.retry
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Task Master
+.roomodes
+.taskmasterconfig
+.windsurfrules 
