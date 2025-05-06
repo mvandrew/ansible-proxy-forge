@@ -1,0 +1,37 @@
+---
+# Main playbook for Ansible Proxy Forge
+
+- name: Common setup for all servers
+  hosts: servers
+  become: true
+  roles:
+    - role: common
+      tags: ['common', 'setup']
+
+- name: Configure Squid proxy servers
+  hosts: proxy
+  become: true
+  roles:
+    - role: squid
+      tags: ['proxy', 'squid']
+
+- name: Configure OpenVPN servers
+  hosts: vpn
+  become: true
+  roles:
+    - role: openvpn
+      tags: ['vpn', 'openvpn']
+
+- name: Configure SSH hardening for all servers
+  hosts: servers
+  become: true
+  roles:
+    - role: ssh
+      tags: ['security', 'ssh']
+
+- name: Apply security hardening to all servers
+  hosts: servers
+  become: true
+  roles:
+    - role: security
+      tags: ['security'] 

@@ -1,0 +1,15 @@
+---
+# Host-specific variables for proxy1
+
+# Custom hostname for this server
+hostname: "proxy1.example.com"
+
+# Custom SSH port for this server
+ssh_port: 2222
+
+# Specific proxy settings for this server
+squid_port: 3128
+squid_whitelist_ips:
+  - "127.0.0.1/32"
+  - "10.8.0.0/24"  # OpenVPN subnet
+  - "192.168.1.0/24"  # Local network 

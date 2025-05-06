@@ -1,0 +1,26 @@
+---
+# Common variables for all servers
+
+# System settings
+timezone: "Europe/Moscow"
+configure_hostname: true
+
+# Security settings
+enable_firewall: true
+ssh_port: 22
+allowed_ssh_networks:
+  - "192.168.1.0/24"
+  - "10.0.0.0/8"
+
+# Proxy settings
+squid_port: 3128
+squid_cache_mem: "512 MB"
+squid_max_obj_size: "4096 KB"
+
+# VPN settings
+openvpn_port: 1194
+openvpn_proto: "udp"
+openvpn_subnet: "10.8.0.0"
+openvpn_netmask: "255.255.255.0"
+openvpn_dns1: "8.8.8.8"
+openvpn_dns2: "8.8.4.4" 
