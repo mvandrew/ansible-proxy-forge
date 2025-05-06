@@ -1,0 +1,23 @@
+---
+# Метаданные роли common
+
+galaxy_info:
+  author: MSAV
+  description: Базовая настройка системы Ubuntu
+  company: MSAV
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+
+  galaxy_tags:
+    - system
+    - ubuntu
+    - configuration
+
+dependencies: []

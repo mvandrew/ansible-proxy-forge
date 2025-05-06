@@ -1,0 +1,8 @@
+---
+# Обработчики роли common
+
+- name: Restart systemd-timesyncd
+  systemd:
+    name: systemd-timesyncd
+    state: restarted
+  when: ansible_service_mgr == 'systemd'
